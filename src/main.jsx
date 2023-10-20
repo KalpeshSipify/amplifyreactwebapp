@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import { VerificationProvider } from "./Context/VerficationContext.jsx";
 import { UserAuthProvider } from "./Context/Userauth.context.jsx";
 import { BrowserRouter } from "react-router-dom";
-import Amplify from "aws-amplify";
+import { Amplify } from "aws-amplify";
 import awsconfig from "./aws-exports";
 Amplify.configure(awsconfig);
 ReactDOM.createRoot(document.getElementById("root")).render(
