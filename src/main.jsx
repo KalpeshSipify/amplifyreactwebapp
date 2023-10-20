@@ -5,9 +5,9 @@ import App from "./App.jsx";
 import { UserAuthProvider } from "./Context/Userauth.context.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { Amplify } from "aws-amplify";
-import config from "./aws-exports";
+import awsmobile from "./aws-exports";
 import { VerificationProvider } from "./Context/VerficationContext.jsx";
-Amplify.configure(config);
+Amplify.configure(awsmobile);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
