@@ -5,11 +5,9 @@ import App from "./App.jsx";
 import { VerificationProvider } from "./Context/VerficationContext.jsx";
 import { UserAuthProvider } from "./Context/Userauth.context.jsx";
 import { BrowserRouter } from "react-router-dom";
-import { Amplify } from "aws-amplify";
-import awsmobile from "./aws-exports.js";
-
-Amplify.configure(awsmobile);
-
+import Amplify from "aws-amplify";
+import awsconfig from "./aws-exports";
+Amplify.configure(awsconfig);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     {/* <GoogleOAuthProvider clientId="1022264087161-mq37fd9botibajkj0pesm53m6ql7sjn2.apps.googleusercontent.com"> */}
