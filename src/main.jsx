@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import { UserAuthProvider } from "./Context/Userauth.context.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { Amplify } from "aws-amplify";
-import awsmobile from "./aws-exports";
+import { awsmobile } from "./aws-exports";
 import { VerificationProvider } from "./Context/VerficationContext.jsx";
 Amplify.configure(awsmobile);
 
