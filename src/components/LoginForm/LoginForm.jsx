@@ -3,6 +3,7 @@ import { Auth } from "aws-amplify";
 import formstyle from "./loginform.module.css";
 import { useContext, useState } from "react";
 import { UserAuthcontext } from "../../Context/Userauth.context";
+// import { CognitoHostedUIIdentityProvider } from "@aws-amplify/auth";
 
 const LoginForm = () => {
   const [formdata, setformdata] = useState({
@@ -30,6 +31,17 @@ const LoginForm = () => {
     }
   };
 
+  // const handleGoogleSignIn = async () => {
+  //   try {
+  //     const Response = await Auth.federatedSignIn({
+  //       provider: CognitoHostedUIIdentityProvider.Google,
+  //     });
+
+  //     console.log("resp", Response);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
   return (
     <>
       <div className={formstyle.form}>
@@ -59,8 +71,10 @@ const LoginForm = () => {
             </div>
           </form>
         </div>
-        <p>OR</p>
-        <div className={formstyle.googleloginbutton}></div>
+        {/* <p>OR</p>
+        <div className={formstyle.googleloginbutton}>
+          <button onClick={handleGoogleSignIn}>Open Google</button>
+        </div> */}
       </div>
     </>
   );

@@ -10,7 +10,6 @@ import awsconfig from "./aws-exports";
 Amplify.configure(awsconfig);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <GoogleOAuthProvider clientId="1022264087161-mq37fd9botibajkj0pesm53m6ql7sjn2.apps.googleusercontent.com"> */}
     <UserAuthProvider>
       <VerificationProvider>
         <BrowserRouter>
@@ -18,6 +17,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         </BrowserRouter>
       </VerificationProvider>
     </UserAuthProvider>
-    {/* </GoogleOAuthProvider> */}
   </React.StrictMode>
 );
